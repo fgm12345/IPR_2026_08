@@ -1,0 +1,2874 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_45e7019bf12893504d6e40f49f7eb1be {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.3.0/leaflet-dvf.markers.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_45e7019bf12893504d6e40f49f7eb1be" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_45e7019bf12893504d6e40f49f7eb1be = L.map(
+                "map_45e7019bf12893504d6e40f49f7eb1be",
+                {
+                    center: [-15.7801, -47.9292],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4ce0a90e93813449377c28d43dc356e9 = L.tileLayer(
+                "http://{s}.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "google",
+  "subdomains": [
+"mt0",
+"mt1",
+"mt2",
+"mt3",
+],
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4ce0a90e93813449377c28d43dc356e9.addTo(map_45e7019bf12893504d6e40f49f7eb1be);
+        
+    
+            var feature_group_7ee01a907b44d6ffacd28ac90a25182c = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_ee9e85495497c76947da9e6c97779db1 = L.marker(
+                [-27.595313134980696, -48.599534917451734],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_4a08a53f50375bccc7f5deacf84961c9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_ee9e85495497c76947da9e6c97779db1.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-282/SC - km 0 ao 8<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 259<br><b>Volume Médio Diário de Veículos (DNIT):</b> 98773.0<br><b>Quantidade de Acidentes (PRF):</b> 259<br><b>Quantidade de Mortos (PRF):</b> 1.0<br><b>Quantidade de Feridos Graves (PRF):</b> 259<br><b>Quantidade de Feridos Leves (PRF):</b> 1.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ee9e85495497c76947da9e6c97779db1.setIcon(icon_4a08a53f50375bccc7f5deacf84961c9);
+            
+    
+            var regular_polygon_marker_ed56b4d516049440b040cf0c7b14959d = new L.RegularPolygonMarker(
+                [-27.595313134980696, -48.599534917451734],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var marker_b2471cbfc25f62280652bcbe215889bc = L.marker(
+                [-16.082111953566436, -47.98159895349651],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_62365f0c679fa033b6e5da5d4b18b647 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_b2471cbfc25f62280652bcbe215889bc.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-040/GO - km 0 ao 8<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 143<br><b>Volume Médio Diário de Veículos (DNIT):</b> nan<br><b>Quantidade de Acidentes (PRF):</b> 143<br><b>Quantidade de Mortos (PRF):</b> 1.0<br><b>Quantidade de Feridos Graves (PRF):</b> 143<br><b>Quantidade de Feridos Leves (PRF):</b> 1.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b2471cbfc25f62280652bcbe215889bc.setIcon(icon_62365f0c679fa033b6e5da5d4b18b647);
+            
+    
+            var regular_polygon_marker_e6faa276631473d13dd70c14c0d3a1b3 = new L.RegularPolygonMarker(
+                [-16.082111953566436, -47.98159895349651],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var marker_76cf38fefbd5687fe7bd6a4ea8bfcc98 = L.marker(
+                [-16.00522364501141, -47.98400037315436],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_7befa962508fca0ea1f48e34fcc657bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_76cf38fefbd5687fe7bd6a4ea8bfcc98.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-040/DF - km 0 ao 8<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 149<br><b>Volume Médio Diário de Veículos (DNIT):</b> nan<br><b>Quantidade de Acidentes (PRF):</b> 149<br><b>Quantidade de Mortos (PRF):</b> 2.0<br><b>Quantidade de Feridos Graves (PRF):</b> 149<br><b>Quantidade de Feridos Leves (PRF):</b> 2.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_76cf38fefbd5687fe7bd6a4ea8bfcc98.setIcon(icon_7befa962508fca0ea1f48e34fcc657bb);
+            
+    
+            var regular_polygon_marker_adb44be0b417a0dcb187e5ebaa6c42ec = new L.RegularPolygonMarker(
+                [-16.00522364501141, -47.98400037315436],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var marker_0ca60789d34602f530056d667d3e14d3 = L.marker(
+                [-2.6211127210989016, -44.27019311274726],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_5c94679691fb25163fc8b34657243168 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_0ca60789d34602f530056d667d3e14d3.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-135/MA - km 0 ao 8<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 91<br><b>Volume Médio Diário de Veículos (DNIT):</b> 4446.0<br><b>Quantidade de Acidentes (PRF):</b> 91<br><b>Quantidade de Mortos (PRF):</b> 2.0<br><b>Quantidade de Feridos Graves (PRF):</b> 91<br><b>Quantidade de Feridos Leves (PRF):</b> 2.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0ca60789d34602f530056d667d3e14d3.setIcon(icon_5c94679691fb25163fc8b34657243168);
+            
+    
+            var regular_polygon_marker_a7ea312fcf993735c7306865fef53258 = new L.RegularPolygonMarker(
+                [-2.6211127210989016, -44.27019311274726],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var marker_d8822316c4808098b13a076a3ed3cb27 = L.marker(
+                [-7.071661569357799, -34.84932530770642],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_bf4dbc7289ddaf4602ea4d53441b430e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_d8822316c4808098b13a076a3ed3cb27.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-230/PB - km 8 ao 16<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 109<br><b>Volume Médio Diário de Veículos (DNIT):</b> 33899.0<br><b>Quantidade de Acidentes (PRF):</b> 109<br><b>Quantidade de Mortos (PRF):</b> 1.0<br><b>Quantidade de Feridos Graves (PRF):</b> 109<br><b>Quantidade de Feridos Leves (PRF):</b> 1.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d8822316c4808098b13a076a3ed3cb27.setIcon(icon_bf4dbc7289ddaf4602ea4d53441b430e);
+            
+    
+            var regular_polygon_marker_fea174d08d9fd78222c7f13cf558e012 = new L.RegularPolygonMarker(
+                [-7.071661569357799, -34.84932530770642],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var marker_16cd53ca8e79d597ca2c5b4e5e966981 = L.marker(
+                [-12.708937969223301, -60.16224602097086],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_9197250b76f020320d2f6022b1d5fb42 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_16cd53ca8e79d597ca2c5b4e5e966981.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-364/RO - km 8 ao 16<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 103<br><b>Volume Médio Diário de Veículos (DNIT):</b> 6941.0<br><b>Quantidade de Acidentes (PRF):</b> 103<br><b>Quantidade de Mortos (PRF):</b> 1.0<br><b>Quantidade de Feridos Graves (PRF):</b> 103<br><b>Quantidade de Feridos Leves (PRF):</b> 1.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_16cd53ca8e79d597ca2c5b4e5e966981.setIcon(icon_9197250b76f020320d2f6022b1d5fb42);
+            
+    
+            var regular_polygon_marker_60f10c4050a0cf7b1404a86efa45296f = new L.RegularPolygonMarker(
+                [-12.708937969223301, -60.16224602097086],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var marker_d2d25ac97691735e5d7dddb2e595966b = L.marker(
+                [-7.13879439254054, -34.85233113064865],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_c712b5690bded3ec58af9ead3252dd32 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_d2d25ac97691735e5d7dddb2e595966b.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-230/PB - km 16 ao 24<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 185<br><b>Volume Médio Diário de Veículos (DNIT):</b> Não registrado<br><b>Quantidade de Acidentes (PRF):</b> 185<br><b>Quantidade de Mortos (PRF):</b> 3.0<br><b>Quantidade de Feridos Graves (PRF):</b> 185<br><b>Quantidade de Feridos Leves (PRF):</b> 3.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d2d25ac97691735e5d7dddb2e595966b.setIcon(icon_c712b5690bded3ec58af9ead3252dd32);
+            
+    
+            var regular_polygon_marker_ac54142ab7c11be7f17f5cc9680099cd = new L.RegularPolygonMarker(
+                [-7.13879439254054, -34.85233113064865],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var marker_b98db3a02d5e8c8acd050fc3c044fc86 = L.marker(
+                [-26.402541286363636, -48.74929015115701],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_2d47115742066a0334d7dbfd256aaf83 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_b98db3a02d5e8c8acd050fc3c044fc86.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-280/SC - km 24 ao 32<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 121<br><b>Volume Médio Diário de Veículos (DNIT):</b> 18947.0<br><b>Quantidade de Acidentes (PRF):</b> 121<br><b>Quantidade de Mortos (PRF):</b> 1.0<br><b>Quantidade de Feridos Graves (PRF):</b> 121<br><b>Quantidade de Feridos Leves (PRF):</b> 1.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b98db3a02d5e8c8acd050fc3c044fc86.setIcon(icon_2d47115742066a0334d7dbfd256aaf83);
+            
+    
+            var regular_polygon_marker_fb5201e6169b2b7d4a0da669aeae582f = new L.RegularPolygonMarker(
+                [-26.402541286363636, -48.74929015115701],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var marker_759aa2ed692f3178bb153bacdb994fa6 = L.marker(
+                [-7.917851879266054, -34.90076273954128],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_7078e3af5858a47c91796b3aab867487 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_759aa2ed692f3178bb153bacdb994fa6.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/PE - km 48 ao 56<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 109<br><b>Volume Médio Diário de Veículos (DNIT):</b> 26679.0<br><b>Quantidade de Acidentes (PRF):</b> 109<br><b>Quantidade de Mortos (PRF):</b> 2.0<br><b>Quantidade de Feridos Graves (PRF):</b> 109<br><b>Quantidade de Feridos Leves (PRF):</b> 2.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_759aa2ed692f3178bb153bacdb994fa6.setIcon(icon_7078e3af5858a47c91796b3aab867487);
+            
+    
+            var regular_polygon_marker_5419b294eaf23c6bd0d4de9464b394bc = new L.RegularPolygonMarker(
+                [-7.917851879266054, -34.90076273954128],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var marker_8f85ac5183fa75e8211b4c649d5432b3 = L.marker(
+                [-8.053848419893617, -34.9436670431383],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_533e210fa6fd3a79e1b2c304ea6ab852 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_8f85ac5183fa75e8211b4c649d5432b3.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/PE - km 64 ao 72<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 188<br><b>Volume Médio Diário de Veículos (DNIT):</b> 52665.0<br><b>Quantidade de Acidentes (PRF):</b> 188<br><b>Quantidade de Mortos (PRF):</b> 5.0<br><b>Quantidade de Feridos Graves (PRF):</b> 188<br><b>Quantidade de Feridos Leves (PRF):</b> 5.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8f85ac5183fa75e8211b4c649d5432b3.setIcon(icon_533e210fa6fd3a79e1b2c304ea6ab852);
+            
+    
+            var regular_polygon_marker_7c37d1ad7f2879090d0c8ddc33da1dea = new L.RegularPolygonMarker(
+                [-8.053848419893617, -34.9436670431383],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var marker_c8f98ba13f0895d08035e4898620b948 = L.marker(
+                [-8.117367732457627, -34.94725537067797],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_bcebc464a56db5b7a0ff307311beb8a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_c8f98ba13f0895d08035e4898620b948.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/PE - km 72 ao 80<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 118<br><b>Volume Médio Diário de Veículos (DNIT):</b> 11341.0<br><b>Quantidade de Acidentes (PRF):</b> 118<br><b>Quantidade de Mortos (PRF):</b> 6.0<br><b>Quantidade de Feridos Graves (PRF):</b> 118<br><b>Quantidade de Feridos Leves (PRF):</b> 6.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c8f98ba13f0895d08035e4898620b948.setIcon(icon_bcebc464a56db5b7a0ff307311beb8a6);
+            
+    
+            var regular_polygon_marker_21f6cd326442d28d660d0a65e9a71172 = new L.RegularPolygonMarker(
+                [-8.117367732457627, -34.94725537067797],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var marker_790f197c419674e175097d943a63c72f = L.marker(
+                [-29.740070968506494, -51.15038445837662],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_ce96265b1238654be957ad5a1c04786f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_790f197c419674e175097d943a63c72f.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/RS - km 240 ao 248<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 154<br><b>Volume Médio Diário de Veículos (DNIT):</b> 93937.0<br><b>Quantidade de Acidentes (PRF):</b> 154<br><b>Quantidade de Mortos (PRF):</b> 6.0<br><b>Quantidade de Feridos Graves (PRF):</b> 154<br><b>Quantidade de Feridos Leves (PRF):</b> 6.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_790f197c419674e175097d943a63c72f.setIcon(icon_ce96265b1238654be957ad5a1c04786f);
+            
+    
+            var regular_polygon_marker_5838d5b08caf90edb05eeb775507fe12 = new L.RegularPolygonMarker(
+                [-29.740070968506494, -51.15038445837662],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var marker_48daaacca46e488be1d1fa97bf271be6 = L.marker(
+                [-29.79927851062992, -51.16451829133859],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_f9b09b256b4ed3ff7e98ce86e406630b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_48daaacca46e488be1d1fa97bf271be6.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/RS - km 248 ao 256<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 127<br><b>Volume Médio Diário de Veículos (DNIT):</b> 93937.0<br><b>Quantidade de Acidentes (PRF):</b> 127<br><b>Quantidade de Mortos (PRF):</b> 5.0<br><b>Quantidade de Feridos Graves (PRF):</b> 127<br><b>Quantidade de Feridos Leves (PRF):</b> 5.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_48daaacca46e488be1d1fa97bf271be6.setIcon(icon_f9b09b256b4ed3ff7e98ce86e406630b);
+            
+    
+            var regular_polygon_marker_7f2d31f32ace314f1a40d79a0861a1fe = new L.RegularPolygonMarker(
+                [-29.79927851062992, -51.16451829133859],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var marker_39e1b6af97436c901c4fc8470159b090 = L.marker(
+                [-12.908485752499997, -38.45590886298387],
+                {
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            var icon_ab41142d335f8c06b27e8e1af8bedba5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_39e1b6af97436c901c4fc8470159b090.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-324/BA - km 616 ao 624<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 124<br><b>Volume Médio Diário de Veículos (DNIT):</b> 8201.0<br><b>Quantidade de Acidentes (PRF):</b> 124<br><b>Quantidade de Mortos (PRF):</b> 0.0<br><b>Quantidade de Feridos Graves (PRF):</b> 124<br><b>Quantidade de Feridos Leves (PRF):</b> 0.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_39e1b6af97436c901c4fc8470159b090.setIcon(icon_ab41142d335f8c06b27e8e1af8bedba5);
+            
+    
+            var regular_polygon_marker_2ddf8e025b66445d2bf0291027083f2f = new L.RegularPolygonMarker(
+                [-12.908485752499997, -38.45590886298387],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": NaN,
+  "rotation": 45,
+}
+            ).addTo(feature_group_7ee01a907b44d6ffacd28ac90a25182c);
+        
+    
+            feature_group_7ee01a907b44d6ffacd28ac90a25182c.addTo(map_45e7019bf12893504d6e40f49f7eb1be);
+        
+    
+            var feature_group_561f2cc7ea86fc625084dd9fa86b9681 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_5ed61362e281fe6e6d56097d964f6914 = L.marker(
+                [-25.524255398127856, -49.2967545536073],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_555ee548cc565535d6638ce1150c4027 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_5ed61362e281fe6e6d56097d964f6914.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-277/PR - km 0 ao 8<br><b>Concessionaria (ANTT):</b> VIA ARAUCÁRIA<br><b>IPR (MPF):</b> 219<br><b>Volume Médio Diário de Veículos (DNIT):</b> 14173.0<br><b>Quantidade de Acidentes (PRF):</b> 219<br><b>Quantidade de Mortos (PRF):</b> 3.0<br><b>Quantidade de Feridos Graves (PRF):</b> 219<br><b>Quantidade de Feridos Leves (PRF):</b> 3.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5ed61362e281fe6e6d56097d964f6914.setIcon(icon_555ee548cc565535d6638ce1150c4027);
+            
+    
+            var regular_polygon_marker_48b3766eed9da9596be18f8ab4a77dd8 = new L.RegularPolygonMarker(
+                [-25.524255398127856, -49.2967545536073],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_459a4c9babde100e21f667c0e423f183 = L.marker(
+                [-25.224603847279994, -48.884043259576],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_9211dd5114ff4d26f206ea846d06e056 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_459a4c9babde100e21f667c0e423f183.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/PR - km 8 ao 16<br><b>Concessionaria (ANTT):</b> AUTOPISTA REGIS BITTENCOURT<br><b>IPR (MPF):</b> 125<br><b>Volume Médio Diário de Veículos (DNIT):</b> 16461.0<br><b>Quantidade de Acidentes (PRF):</b> 125<br><b>Quantidade de Mortos (PRF):</b> 2.0<br><b>Quantidade de Feridos Graves (PRF):</b> 125<br><b>Quantidade de Feridos Leves (PRF):</b> 2.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_459a4c9babde100e21f667c0e423f183.setIcon(icon_9211dd5114ff4d26f206ea846d06e056);
+            
+    
+            var regular_polygon_marker_df9fe0ba05d9645e64ccb17e07830aca = new L.RegularPolygonMarker(
+                [-25.224603847279994, -48.884043259576],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_8afbd800b04cd890c00d922dcfe9a15f = L.marker(
+                [-25.212144144956525, -48.90403715965218],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_a6d76a9f2a72510e7f85c1ac367f0d0e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_8afbd800b04cd890c00d922dcfe9a15f.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/PR - km 16 ao 24<br><b>Concessionaria (ANTT):</b> AUTOPISTA REGIS BITTENCOURT<br><b>IPR (MPF):</b> 115<br><b>Volume Médio Diário de Veículos (DNIT):</b> Não registrado<br><b>Quantidade de Acidentes (PRF):</b> 115<br><b>Quantidade de Mortos (PRF):</b> 0.0<br><b>Quantidade de Feridos Graves (PRF):</b> 115<br><b>Quantidade de Feridos Leves (PRF):</b> 0.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8afbd800b04cd890c00d922dcfe9a15f.setIcon(icon_a6d76a9f2a72510e7f85c1ac367f0d0e);
+            
+    
+            var regular_polygon_marker_a25b9b531acfda3027bfba1522645920 = new L.RegularPolygonMarker(
+                [-25.212144144956525, -48.90403715965218],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_b924f1d6dfa2d437c6cc136c182f327f = L.marker(
+                [-25.193102160336146, -48.8877954297479],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_565b30986a9e41344577d7d1a5cfcb95 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_b924f1d6dfa2d437c6cc136c182f327f.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/PR - km 40 ao 48<br><b>Concessionaria (ANTT):</b> AUTOPISTA REGIS BITTENCOURT<br><b>IPR (MPF):</b> 119<br><b>Volume Médio Diário de Veículos (DNIT):</b> 28147.0<br><b>Quantidade de Acidentes (PRF):</b> 119<br><b>Quantidade de Mortos (PRF):</b> 2.0<br><b>Quantidade de Feridos Graves (PRF):</b> 119<br><b>Quantidade de Feridos Leves (PRF):</b> 2.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b924f1d6dfa2d437c6cc136c182f327f.setIcon(icon_565b30986a9e41344577d7d1a5cfcb95);
+            
+    
+            var regular_polygon_marker_e6a6f3c313e2b58e9bbd7d40a6186492 = new L.RegularPolygonMarker(
+                [-25.193102160336146, -48.8877954297479],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_12692ab5cbc167d90f9bbdef8ac4d7e1 = L.marker(
+                [-25.472799127945205, -49.21785427431507],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_dd73339c2ccf3dbebd26a4f5ccf368ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_12692ab5cbc167d90f9bbdef8ac4d7e1.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-277/PR - km 80 ao 88<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 146<br><b>Volume Médio Diário de Veículos (DNIT):</b> 27437.0<br><b>Quantidade de Acidentes (PRF):</b> 146<br><b>Quantidade de Mortos (PRF):</b> 1.0<br><b>Quantidade de Feridos Graves (PRF):</b> 146<br><b>Quantidade de Feridos Leves (PRF):</b> 1.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_12692ab5cbc167d90f9bbdef8ac4d7e1.setIcon(icon_dd73339c2ccf3dbebd26a4f5ccf368ce);
+            
+    
+            var regular_polygon_marker_f45b988876ad9b3c61ba7cd240962ea7 = new L.RegularPolygonMarker(
+                [-25.472799127945205, -49.21785427431507],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_cf51559519b06ec2ffe15a3ae3fb4dc5 = L.marker(
+                [-22.658545460787398, -43.2807887247244],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_f8480e824d5c525614b76881b0b03d44 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_cf51559519b06ec2ffe15a3ae3fb4dc5.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-040/RJ - km 104 ao 112<br><b>Concessionaria (ANTT):</b> ELOVIAS<br><b>IPR (MPF):</b> 127<br><b>Volume Médio Diário de Veículos (DNIT):</b> nan<br><b>Quantidade de Acidentes (PRF):</b> 127<br><b>Quantidade de Mortos (PRF):</b> 0.0<br><b>Quantidade de Feridos Graves (PRF):</b> 127<br><b>Quantidade de Feridos Leves (PRF):</b> 0.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cf51559519b06ec2ffe15a3ae3fb4dc5.setIcon(icon_f8480e824d5c525614b76881b0b03d44);
+            
+    
+            var regular_polygon_marker_2185d045db4073a8139358f2b1ccaad5 = new L.RegularPolygonMarker(
+                [-22.658545460787398, -43.2807887247244],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_d68d9d90fc31afe547e8e648091ab303 = L.marker(
+                [-22.735941369615382, -43.28836752769231],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_2e0735fa99ed9f6f81e0ba24a122cb6f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_d68d9d90fc31afe547e8e648091ab303.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-040/RJ - km 112 ao 120<br><b>Concessionaria (ANTT):</b> ELOVIAS<br><b>IPR (MPF):</b> 104<br><b>Volume Médio Diário de Veículos (DNIT):</b> nan<br><b>Quantidade de Acidentes (PRF):</b> 104<br><b>Quantidade de Mortos (PRF):</b> 4.0<br><b>Quantidade de Feridos Graves (PRF):</b> 104<br><b>Quantidade de Feridos Leves (PRF):</b> 4.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d68d9d90fc31afe547e8e648091ab303.setIcon(icon_2e0735fa99ed9f6f81e0ba24a122cb6f);
+            
+    
+            var regular_polygon_marker_0d2fe49796a47c42430fa8edb37b4b91 = new L.RegularPolygonMarker(
+                [-22.735941369615382, -43.28836752769231],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_0d3784d7465523082dd3ee2f094d0bbc = L.marker(
+                [-26.878339565909094, -48.721605894999996],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_155168aaa5bf3ba43ebb066e48820e9e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_0d3784d7465523082dd3ee2f094d0bbc.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/SC - km 112 ao 120<br><b>Concessionaria (ANTT):</b> AUTOPISTA LITORAL SUL<br><b>IPR (MPF):</b> 176<br><b>Volume Médio Diário de Veículos (DNIT):</b> 68196.0<br><b>Quantidade de Acidentes (PRF):</b> 176<br><b>Quantidade de Mortos (PRF):</b> 1.0<br><b>Quantidade de Feridos Graves (PRF):</b> 176<br><b>Quantidade de Feridos Leves (PRF):</b> 1.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0d3784d7465523082dd3ee2f094d0bbc.setIcon(icon_155168aaa5bf3ba43ebb066e48820e9e);
+            
+    
+            var regular_polygon_marker_d235db86bab33b6086e5c106d97607e1 = new L.RegularPolygonMarker(
+                [-26.878339565909094, -48.721605894999996],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_4c16a6d904f9e43512f9c60f06e42b1c = L.marker(
+                [-25.556496261121495, -49.29879786467289],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_fafb08446eaef74031012dfcca633824 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_4c16a6d904f9e43512f9c60f06e42b1c.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/PR - km 112 ao 120<br><b>Concessionaria (ANTT):</b> AUTOPISTA PLANALTO SUL<br><b>IPR (MPF):</b> 214<br><b>Volume Médio Diário de Veículos (DNIT):</b> Não registrado<br><b>Quantidade de Acidentes (PRF):</b> 214<br><b>Quantidade de Mortos (PRF):</b> 3.0<br><b>Quantidade de Feridos Graves (PRF):</b> 214<br><b>Quantidade de Feridos Leves (PRF):</b> 3.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4c16a6d904f9e43512f9c60f06e42b1c.setIcon(icon_fafb08446eaef74031012dfcca633824);
+            
+    
+            var regular_polygon_marker_a79fc703a4af71f654e0eec4d6b5e657 = new L.RegularPolygonMarker(
+                [-25.556496261121495, -49.29879786467289],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_8813911dbc3063038b9d9155ed95531b = L.marker(
+                [-22.786059857586203, -43.286894685],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_31c1663186efd1b98a1ecd60d7b4caaf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_8813911dbc3063038b9d9155ed95531b.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-040/RJ - km 120 ao 128<br><b>Concessionaria (ANTT):</b> ELOVIAS<br><b>IPR (MPF):</b> 116<br><b>Volume Médio Diário de Veículos (DNIT):</b> nan<br><b>Quantidade de Acidentes (PRF):</b> 116<br><b>Quantidade de Mortos (PRF):</b> 2.0<br><b>Quantidade de Feridos Graves (PRF):</b> 116<br><b>Quantidade de Feridos Leves (PRF):</b> 2.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8813911dbc3063038b9d9155ed95531b.setIcon(icon_31c1663186efd1b98a1ecd60d7b4caaf);
+            
+    
+            var regular_polygon_marker_7e11e3c43591d7186541b16eacea1c00 = new L.RegularPolygonMarker(
+                [-22.786059857586203, -43.286894685],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_da0a52c9b04680b87617526698e161cd = L.marker(
+                [-25.61401720387879, -49.313678245515156],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_7145e980488799b3328c26c03dccced3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_da0a52c9b04680b87617526698e161cd.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/PR - km 120 ao 128<br><b>Concessionaria (ANTT):</b> AUTOPISTA PLANALTO SUL<br><b>IPR (MPF):</b> 165<br><b>Volume Médio Diário de Veículos (DNIT):</b> 64490.0<br><b>Quantidade de Acidentes (PRF):</b> 165<br><b>Quantidade de Mortos (PRF):</b> 2.0<br><b>Quantidade de Feridos Graves (PRF):</b> 165<br><b>Quantidade de Feridos Leves (PRF):</b> 2.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_da0a52c9b04680b87617526698e161cd.setIcon(icon_7145e980488799b3328c26c03dccced3);
+            
+    
+            var regular_polygon_marker_9116b77762d9d4587705337b936efe9c = new L.RegularPolygonMarker(
+                [-25.61401720387879, -49.313678245515156],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_d0f7138ba413cf30315fdad704d0a211 = L.marker(
+                [-26.93971982916084, -48.695524060699306],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_c92f35e9bc5e0920c6b534c352ffc867 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_d0f7138ba413cf30315fdad704d0a211.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/SC - km 120 ao 128<br><b>Concessionaria (ANTT):</b> AUTOPISTA LITORAL SUL<br><b>IPR (MPF):</b> 143<br><b>Volume Médio Diário de Veículos (DNIT):</b> 68065.0<br><b>Quantidade de Acidentes (PRF):</b> 143<br><b>Quantidade de Mortos (PRF):</b> 3.0<br><b>Quantidade de Feridos Graves (PRF):</b> 143<br><b>Quantidade de Feridos Leves (PRF):</b> 3.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d0f7138ba413cf30315fdad704d0a211.setIcon(icon_c92f35e9bc5e0920c6b534c352ffc867);
+            
+    
+            var regular_polygon_marker_099f067c3a5c88e877f8a0fb62c58506 = new L.RegularPolygonMarker(
+                [-26.93971982916084, -48.695524060699306],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_fdb97b72c43e2df876e82441e57cfcfe = L.marker(
+                [-26.993920661689398, -48.65436301840228],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_963ae76b9107e727fef7eee973a27b00 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_fdb97b72c43e2df876e82441e57cfcfe.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/SC - km 128 ao 136<br><b>Concessionaria (ANTT):</b> AUTOPISTA LITORAL SUL<br><b>IPR (MPF):</b> 132<br><b>Volume Médio Diário de Veículos (DNIT):</b> 68065.0<br><b>Quantidade de Acidentes (PRF):</b> 132<br><b>Quantidade de Mortos (PRF):</b> 1.0<br><b>Quantidade de Feridos Graves (PRF):</b> 132<br><b>Quantidade de Feridos Leves (PRF):</b> 1.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fdb97b72c43e2df876e82441e57cfcfe.setIcon(icon_963ae76b9107e727fef7eee973a27b00);
+            
+    
+            var regular_polygon_marker_32830405a323f5e3f913efd50d80f7f9 = new L.RegularPolygonMarker(
+                [-26.993920661689398, -48.65436301840228],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_650b41b422f0ec90d2a57dc279a328fd = L.marker(
+                [-27.100376884881893, -48.60895867590551],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_a4a5853e33548d63cb9677b896007117 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_650b41b422f0ec90d2a57dc279a328fd.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/SC - km 144 ao 152<br><b>Concessionaria (ANTT):</b> AUTOPISTA LITORAL SUL<br><b>IPR (MPF):</b> 127<br><b>Volume Médio Diário de Veículos (DNIT):</b> 80413.0<br><b>Quantidade de Acidentes (PRF):</b> 127<br><b>Quantidade de Mortos (PRF):</b> 0.0<br><b>Quantidade de Feridos Graves (PRF):</b> 127<br><b>Quantidade de Feridos Leves (PRF):</b> 0.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_650b41b422f0ec90d2a57dc279a328fd.setIcon(icon_a4a5853e33548d63cb9677b896007117);
+            
+    
+            var regular_polygon_marker_377007a88627d7f2855339ff9aaa1f32 = new L.RegularPolygonMarker(
+                [-27.100376884881893, -48.60895867590551],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_ee57e051904b5cb61d1a0de35bc0f2e2 = L.marker(
+                [-19.377349454901953, -40.06464865372549],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_3ccc188784eed45d1022a239d84bdd28 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_ee57e051904b5cb61d1a0de35bc0f2e2.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/ES - km 144 ao 152<br><b>Concessionaria (ANTT):</b> ECOVIAS CAPIXABA<br><b>IPR (MPF):</b> 102<br><b>Volume Médio Diário de Veículos (DNIT):</b> 8872.0<br><b>Quantidade de Acidentes (PRF):</b> 102<br><b>Quantidade de Mortos (PRF):</b> 1.0<br><b>Quantidade de Feridos Graves (PRF):</b> 102<br><b>Quantidade de Feridos Leves (PRF):</b> 1.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ee57e051904b5cb61d1a0de35bc0f2e2.setIcon(icon_3ccc188784eed45d1022a239d84bdd28);
+            
+    
+            var regular_polygon_marker_d410cc6ab8e9218ac5d0391ed51559c9 = new L.RegularPolygonMarker(
+                [-19.377349454901953, -40.06464865372549],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_367c4fb73bda45e88da49bb65e2bd79f = L.marker(
+                [-22.767387957479674, -43.413217540650415],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_65565f787c8c72f4ed226f7a8d53316e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_367c4fb73bda45e88da49bb65e2bd79f.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/RJ - km 176 ao 184<br><b>Concessionaria (ANTT):</b> RIOSP<br><b>IPR (MPF):</b> 123<br><b>Volume Médio Diário de Veículos (DNIT):</b> 12880.0<br><b>Quantidade de Acidentes (PRF):</b> 123<br><b>Quantidade de Mortos (PRF):</b> 4.0<br><b>Quantidade de Feridos Graves (PRF):</b> 123<br><b>Quantidade de Feridos Leves (PRF):</b> 4.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_367c4fb73bda45e88da49bb65e2bd79f.setIcon(icon_65565f787c8c72f4ed226f7a8d53316e);
+            
+    
+            var regular_polygon_marker_464f0365f9a4988b70a4247bdfc0f4ff = new L.RegularPolygonMarker(
+                [-22.767387957479674, -43.413217540650415],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_9bc34d6b6ae1b8421b4b7fd838a57405 = L.marker(
+                [-22.742439463400004, -43.4726194838],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_6d3c30473b53d8b000071c177e1630b1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_9bc34d6b6ae1b8421b4b7fd838a57405.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/RJ - km 184 ao 192<br><b>Concessionaria (ANTT):</b> RIOSP<br><b>IPR (MPF):</b> 150<br><b>Volume Médio Diário de Veículos (DNIT):</b> 13176.0<br><b>Quantidade de Acidentes (PRF):</b> 150<br><b>Quantidade de Mortos (PRF):</b> 3.0<br><b>Quantidade de Feridos Graves (PRF):</b> 150<br><b>Quantidade de Feridos Leves (PRF):</b> 3.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9bc34d6b6ae1b8421b4b7fd838a57405.setIcon(icon_6d3c30473b53d8b000071c177e1630b1);
+            
+    
+            var regular_polygon_marker_b9e296510ea6af7dc4a9724bfee6f385 = new L.RegularPolygonMarker(
+                [-22.742439463400004, -43.4726194838],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_ac0405a159b4f118079ba9abfdcfe6cf = L.marker(
+                [-27.51209994446154, -48.642015798230766],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_f8f7c0c448728bcc2083c689b299768d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_ac0405a159b4f118079ba9abfdcfe6cf.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/SC - km 192 ao 200<br><b>Concessionaria (ANTT):</b> AUTOPISTA LITORAL SUL<br><b>IPR (MPF):</b> 130<br><b>Volume Médio Diário de Veículos (DNIT):</b> 80914.0<br><b>Quantidade de Acidentes (PRF):</b> 130<br><b>Quantidade de Mortos (PRF):</b> 2.0<br><b>Quantidade de Feridos Graves (PRF):</b> 130<br><b>Quantidade de Feridos Leves (PRF):</b> 2.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ac0405a159b4f118079ba9abfdcfe6cf.setIcon(icon_f8f7c0c448728bcc2083c689b299768d);
+            
+    
+            var regular_polygon_marker_81fc95ef47e0c804395b2c877180904c = new L.RegularPolygonMarker(
+                [-27.51209994446154, -48.642015798230766],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_a1f22721c973dfc396de0d6777a15617 = L.marker(
+                [-27.576680509761193, -48.61820281552238],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_7f50c50e884e8e4d5cfd2264f0558691 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_a1f22721c973dfc396de0d6777a15617.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/SC - km 200 ao 208<br><b>Concessionaria (ANTT):</b> AUTOPISTA LITORAL SUL<br><b>IPR (MPF):</b> 335<br><b>Volume Médio Diário de Veículos (DNIT):</b> Não registrado<br><b>Quantidade de Acidentes (PRF):</b> 335<br><b>Quantidade de Mortos (PRF):</b> 5.0<br><b>Quantidade de Feridos Graves (PRF):</b> 335<br><b>Quantidade de Feridos Leves (PRF):</b> 5.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1f22721c973dfc396de0d6777a15617.setIcon(icon_7f50c50e884e8e4d5cfd2264f0558691);
+            
+    
+            var regular_polygon_marker_0fa9c30675158b1d13f6802acdec4e72 = new L.RegularPolygonMarker(
+                [-27.576680509761193, -48.61820281552238],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_1e1702ee25fefceac8ca84fcdafbd79f = L.marker(
+                [-27.629304712678568, -48.656010167428576],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_a59036a361d4a4c2669503a219259263 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_1e1702ee25fefceac8ca84fcdafbd79f.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/SC - km 208 ao 216<br><b>Concessionaria (ANTT):</b> AUTOPISTA LITORAL SUL<br><b>IPR (MPF):</b> 280<br><b>Volume Médio Diário de Veículos (DNIT):</b> 57755.0<br><b>Quantidade de Acidentes (PRF):</b> 280<br><b>Quantidade de Mortos (PRF):</b> 2.0<br><b>Quantidade de Feridos Graves (PRF):</b> 280<br><b>Quantidade de Feridos Leves (PRF):</b> 2.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1e1702ee25fefceac8ca84fcdafbd79f.setIcon(icon_a59036a361d4a4c2669503a219259263);
+            
+    
+            var regular_polygon_marker_1af02e292a3ce024e7801a7277ecb1b7 = new L.RegularPolygonMarker(
+                [-27.629304712678568, -48.656010167428576],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_fae6f60d7b0fc61dadc7d49b42cecc0a = L.marker(
+                [-23.434486932418302, -46.42453424418301],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_3fa3ef116882da5071ae9f18d6a27c3e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_fae6f60d7b0fc61dadc7d49b42cecc0a.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/SP - km 208 ao 216<br><b>Concessionaria (ANTT):</b> RIOSP<br><b>IPR (MPF):</b> 153<br><b>Volume Médio Diário de Veículos (DNIT):</b> 32770.0<br><b>Quantidade de Acidentes (PRF):</b> 153<br><b>Quantidade de Mortos (PRF):</b> 3.0<br><b>Quantidade de Feridos Graves (PRF):</b> 153<br><b>Quantidade de Feridos Leves (PRF):</b> 3.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fae6f60d7b0fc61dadc7d49b42cecc0a.setIcon(icon_3fa3ef116882da5071ae9f18d6a27c3e);
+            
+    
+            var regular_polygon_marker_804dd54c07fcc2bfedc906ddd2afd47e = new L.RegularPolygonMarker(
+                [-23.434486932418302, -46.42453424418301],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_31b9dc52a807b6dcf171be97236a2648 = L.marker(
+                [-23.464169434285715, -46.49683560228571],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_5c129df10e959cf663c88c7fc0c35afd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_31b9dc52a807b6dcf171be97236a2648.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/SP - km 216 ao 224<br><b>Concessionaria (ANTT):</b> RIOSP<br><b>IPR (MPF):</b> 420<br><b>Volume Médio Diário de Veículos (DNIT):</b> 73575.0<br><b>Quantidade de Acidentes (PRF):</b> 420<br><b>Quantidade de Mortos (PRF):</b> 0.0<br><b>Quantidade de Feridos Graves (PRF):</b> 420<br><b>Quantidade de Feridos Leves (PRF):</b> 0.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_31b9dc52a807b6dcf171be97236a2648.setIcon(icon_5c129df10e959cf663c88c7fc0c35afd);
+            
+    
+            var regular_polygon_marker_05047e93ab40d445483d2ca3c88a8dea = new L.RegularPolygonMarker(
+                [-23.464169434285715, -46.49683560228571],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_48fc9e371b4771a428ed11273d712e4f = L.marker(
+                [-23.501573018639707, -46.56162813772059],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_8ce843f28b0eb49f41105e1718cf76b8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_48fc9e371b4771a428ed11273d712e4f.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/SP - km 224 ao 232<br><b>Concessionaria (ANTT):</b> RIOSP<br><b>IPR (MPF):</b> 272<br><b>Volume Médio Diário de Veículos (DNIT):</b> 59036.0<br><b>Quantidade de Acidentes (PRF):</b> 272<br><b>Quantidade de Mortos (PRF):</b> 3.0<br><b>Quantidade de Feridos Graves (PRF):</b> 272<br><b>Quantidade de Feridos Leves (PRF):</b> 3.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_48fc9e371b4771a428ed11273d712e4f.setIcon(icon_8ce843f28b0eb49f41105e1718cf76b8);
+            
+    
+            var regular_polygon_marker_b4fffc5d9d89a79a29c481389a5ed3bf = new L.RegularPolygonMarker(
+                [-23.501573018639707, -46.56162813772059],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_5b0aac931a0cd8cab89f7382856c6ace = L.marker(
+                [-17.858219110582525, -41.51579676174758],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_5dcc384f68ac229b6f0f5fa1fe620d3e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_5b0aac931a0cd8cab89f7382856c6ace.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/MG - km 272 ao 280<br><b>Concessionaria (ANTT):</b> ECOVIAS DAS GERAIS<br><b>IPR (MPF):</b> 103<br><b>Volume Médio Diário de Veículos (DNIT):</b> Não registrado<br><b>Quantidade de Acidentes (PRF):</b> 103<br><b>Quantidade de Mortos (PRF):</b> 1.0<br><b>Quantidade de Feridos Graves (PRF):</b> 103<br><b>Quantidade de Feridos Leves (PRF):</b> 1.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5b0aac931a0cd8cab89f7382856c6ace.setIcon(icon_5dcc384f68ac229b6f0f5fa1fe620d3e);
+            
+    
+            var regular_polygon_marker_dc9e87dedd25f71e144f8228d0848ae5 = new L.RegularPolygonMarker(
+                [-17.858219110582525, -41.51579676174758],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_ca874cdccd550705fbab0afd12af172e = L.marker(
+                [-23.674204872781065, -46.86020256846153],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_7e044688df42100b2ae3526649828b14 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_ca874cdccd550705fbab0afd12af172e.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/SP - km 280 ao 288<br><b>Concessionaria (ANTT):</b> AUTOPISTA REGIS BITTENCOURT<br><b>IPR (MPF):</b> 169<br><b>Volume Médio Diário de Veículos (DNIT):</b> 29910.0<br><b>Quantidade de Acidentes (PRF):</b> 169<br><b>Quantidade de Mortos (PRF):</b> 7.0<br><b>Quantidade de Feridos Graves (PRF):</b> 169<br><b>Quantidade de Feridos Leves (PRF):</b> 7.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ca874cdccd550705fbab0afd12af172e.setIcon(icon_7e044688df42100b2ae3526649828b14);
+            
+    
+            var regular_polygon_marker_52676362197c516eff971abd4859a53b = new L.RegularPolygonMarker(
+                [-23.674204872781065, -46.86020256846153],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_f0b29e09eebb1df78b6513cad80d48e8 = L.marker(
+                [-20.30101915982301, -40.39485165176992],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_d19016abcbd7e9b6291570d9fd794f4c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_f0b29e09eebb1df78b6513cad80d48e8.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/ES - km 288 ao 296<br><b>Concessionaria (ANTT):</b> ECOVIAS CAPIXABA<br><b>IPR (MPF):</b> 113<br><b>Volume Médio Diário de Veículos (DNIT):</b> 15394.0<br><b>Quantidade de Acidentes (PRF):</b> 113<br><b>Quantidade de Mortos (PRF):</b> 5.0<br><b>Quantidade de Feridos Graves (PRF):</b> 113<br><b>Quantidade de Feridos Leves (PRF):</b> 5.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f0b29e09eebb1df78b6513cad80d48e8.setIcon(icon_d19016abcbd7e9b6291570d9fd794f4c);
+            
+    
+            var regular_polygon_marker_791b2fc762f6373eb2ddcae753e2ab60 = new L.RegularPolygonMarker(
+                [-20.30101915982301, -40.39485165176992],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_c8261f5a78a9fb1d214ed3ab33b2ed2f = L.marker(
+                [-22.87192021465347, -43.120855336336646],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_1506537cdd645cdbcad30178b1da3cb0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_c8261f5a78a9fb1d214ed3ab33b2ed2f.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/RJ - km 320 ao 328<br><b>Concessionaria (ANTT):</b> Trecho não concedido<br><b>IPR (MPF):</b> 101<br><b>Volume Médio Diário de Veículos (DNIT):</b> 99242.0<br><b>Quantidade de Acidentes (PRF):</b> 101<br><b>Quantidade de Mortos (PRF):</b> 1.0<br><b>Quantidade de Feridos Graves (PRF):</b> 101<br><b>Quantidade de Feridos Leves (PRF):</b> 1.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c8261f5a78a9fb1d214ed3ab33b2ed2f.setIcon(icon_1506537cdd645cdbcad30178b1da3cb0);
+            
+    
+            var regular_polygon_marker_b7c77b992351216061465de56e93516d = new L.RegularPolygonMarker(
+                [-22.87192021465347, -43.120855336336646],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_fd2685f70f240de57c893a17e105e9d8 = L.marker(
+                [-28.46505508305085, -49.00257568245763],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_d08e0775ccd1265af78c36fc30272328 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_fd2685f70f240de57c893a17e105e9d8.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-101/SC - km 328 ao 336<br><b>Concessionaria (ANTT):</b> VIA COSTEIRA<br><b>IPR (MPF):</b> 118<br><b>Volume Médio Diário de Veículos (DNIT):</b> 32041.0<br><b>Quantidade de Acidentes (PRF):</b> 118<br><b>Quantidade de Mortos (PRF):</b> 1.0<br><b>Quantidade de Feridos Graves (PRF):</b> 118<br><b>Quantidade de Feridos Leves (PRF):</b> 1.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fd2685f70f240de57c893a17e105e9d8.setIcon(icon_d08e0775ccd1265af78c36fc30272328);
+            
+    
+            var regular_polygon_marker_0fe374b2ec5365c6f083343cfe4b9daf = new L.RegularPolygonMarker(
+                [-28.46505508305085, -49.00257568245763],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_46cf1750e0b85979ea6b8abf7ec26a01 = L.marker(
+                [-18.87323689388889, -41.96348926259258],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_f6b4f363c0149070c0f4190f04072071 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_46cf1750e0b85979ea6b8abf7ec26a01.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-116/MG - km 408 ao 416<br><b>Concessionaria (ANTT):</b> ECOVIAS RIO MINAS<br><b>IPR (MPF):</b> 108<br><b>Volume Médio Diário de Veículos (DNIT):</b> 3231.0<br><b>Quantidade de Acidentes (PRF):</b> 108<br><b>Quantidade de Mortos (PRF):</b> 2.0<br><b>Quantidade de Feridos Graves (PRF):</b> 108<br><b>Quantidade de Feridos Leves (PRF):</b> 2.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_46cf1750e0b85979ea6b8abf7ec26a01.setIcon(icon_f6b4f363c0149070c0f4190f04072071);
+            
+    
+            var regular_polygon_marker_11b1dedf1cbda212b58f50587fb026a4 = new L.RegularPolygonMarker(
+                [-18.87323689388889, -41.96348926259258],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_c47bd4135bd9cffe870d6867bf898809 = L.marker(
+                [-10.43155116560606, -62.48152584469696],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_127033ee17a18613d6c0b3c7b7741da0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_c47bd4135bd9cffe870d6867bf898809.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-364/RO - km 424 ao 432<br><b>Concessionaria (ANTT):</b> NOVA 364<br><b>IPR (MPF):</b> 132<br><b>Volume Médio Diário de Veículos (DNIT):</b> 9471.0<br><b>Quantidade de Acidentes (PRF):</b> 132<br><b>Quantidade de Mortos (PRF):</b> 0.0<br><b>Quantidade de Feridos Graves (PRF):</b> 132<br><b>Quantidade de Feridos Leves (PRF):</b> 0.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c47bd4135bd9cffe870d6867bf898809.setIcon(icon_127033ee17a18613d6c0b3c7b7741da0);
+            
+    
+            var regular_polygon_marker_88d84c3cd3ae654bd570c30f44ee9dd5 = new L.RegularPolygonMarker(
+                [-10.43155116560606, -62.48152584469696],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_62249bc15c2bc6a2fe5ad9bbd0522f8c = L.marker(
+                [-19.9580563610084, -44.09518436432773],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_9535a59a7b44f8a35178a31318a48663 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_62249bc15c2bc6a2fe5ad9bbd0522f8c.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-381/MG - km 480 ao 488<br><b>Concessionaria (ANTT):</b> MOTIVA MINAS SP<br><b>IPR (MPF):</b> 238<br><b>Volume Médio Diário de Veículos (DNIT):</b> Não registrado<br><b>Quantidade de Acidentes (PRF):</b> 238<br><b>Quantidade de Mortos (PRF):</b> 4.0<br><b>Quantidade de Feridos Graves (PRF):</b> 238<br><b>Quantidade de Feridos Leves (PRF):</b> 4.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_62249bc15c2bc6a2fe5ad9bbd0522f8c.setIcon(icon_9535a59a7b44f8a35178a31318a48663);
+            
+    
+            var regular_polygon_marker_07f398d88dbefe9fc707f29022af1a40 = new L.RegularPolygonMarker(
+                [-19.9580563610084, -44.09518436432773],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_8406e2073d72ab498dd83c7ddafff6c8 = L.marker(
+                [-19.964690569455783, -44.16175878251701],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_f1c432317762549df78d2ef97bbdfae7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_8406e2073d72ab498dd83c7ddafff6c8.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-381/MG - km 488 ao 496<br><b>Concessionaria (ANTT):</b> MOTIVA MINAS SP<br><b>IPR (MPF):</b> 147<br><b>Volume Médio Diário de Veículos (DNIT):</b> 52282.0<br><b>Quantidade de Acidentes (PRF):</b> 147<br><b>Quantidade de Mortos (PRF):</b> 2.0<br><b>Quantidade de Feridos Graves (PRF):</b> 147<br><b>Quantidade de Feridos Leves (PRF):</b> 2.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8406e2073d72ab498dd83c7ddafff6c8.setIcon(icon_f1c432317762549df78d2ef97bbdfae7);
+            
+    
+            var regular_polygon_marker_969df223f4bc712d3b349bc1263f6ddf = new L.RegularPolygonMarker(
+                [-19.964690569455783, -44.16175878251701],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_c590ab8102d221f28b2625b6d9010736 = L.marker(
+                [-20.006306371754388, -44.217810493684205],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_57f6e7ec6b06adadababcf153ee5e01c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_c590ab8102d221f28b2625b6d9010736.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-381/MG - km 496 ao 504<br><b>Concessionaria (ANTT):</b> MOTIVA MINAS SP<br><b>IPR (MPF):</b> 114<br><b>Volume Médio Diário de Veículos (DNIT):</b> 49055.0<br><b>Quantidade de Acidentes (PRF):</b> 114<br><b>Quantidade de Mortos (PRF):</b> 0.0<br><b>Quantidade de Feridos Graves (PRF):</b> 114<br><b>Quantidade de Feridos Leves (PRF):</b> 0.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c590ab8102d221f28b2625b6d9010736.setIcon(icon_57f6e7ec6b06adadababcf153ee5e01c);
+            
+    
+            var regular_polygon_marker_d98e49c824978c4642d7f36f110c97b6 = new L.RegularPolygonMarker(
+                [-20.006306371754388, -44.217810493684205],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_bc4338c52fd7223f34870ffc5ff23569 = L.marker(
+                [-19.821659926, -44.089070534],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_e447155aba8a9ee22fc19267b34763d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_bc4338c52fd7223f34870ffc5ff23569.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-040/MG - km 512 ao 520<br><b>Concessionaria (ANTT):</b> VIA CRISTAIS<br><b>IPR (MPF):</b> 130<br><b>Volume Médio Diário de Veículos (DNIT):</b> nan<br><b>Quantidade de Acidentes (PRF):</b> 130<br><b>Quantidade de Mortos (PRF):</b> 2.0<br><b>Quantidade de Feridos Graves (PRF):</b> 130<br><b>Quantidade de Feridos Leves (PRF):</b> 2.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bc4338c52fd7223f34870ffc5ff23569.setIcon(icon_e447155aba8a9ee22fc19267b34763d7);
+            
+    
+            var regular_polygon_marker_2133d621f3f63df8f9b63944a1872892 = new L.RegularPolygonMarker(
+                [-19.821659926, -44.089070534],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_9af3439574cf8e6b2bcf83b0f113e79a = L.marker(
+                [-19.875861468102187, -44.05823091364964],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_06d713bf96abd2523aea2d8cdbfa8e79 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_9af3439574cf8e6b2bcf83b0f113e79a.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-040/MG - km 520 ao 528<br><b>Concessionaria (ANTT):</b> VIA CRISTAIS<br><b>IPR (MPF):</b> 137<br><b>Volume Médio Diário de Veículos (DNIT):</b> nan<br><b>Quantidade de Acidentes (PRF):</b> 137<br><b>Quantidade de Mortos (PRF):</b> 4.0<br><b>Quantidade de Feridos Graves (PRF):</b> 137<br><b>Quantidade de Feridos Leves (PRF):</b> 4.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9af3439574cf8e6b2bcf83b0f113e79a.setIcon(icon_06d713bf96abd2523aea2d8cdbfa8e79);
+            
+    
+            var regular_polygon_marker_96cfb1eb3aa61b47187e9c2fc6901cdc = new L.RegularPolygonMarker(
+                [-19.875861468102187, -44.05823091364964],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var marker_ec2e83b919f47c9e2aa74e08fe5dc23e = L.marker(
+                [-22.769118618257576, -46.199628408333325],
+                {
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            var icon_4e50e2aa24d6966f3af8a829ff5a9840 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "black",
+  "icon": "car-crash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_ec2e83b919f47c9e2aa74e08fe5dc23e.bindTooltip(
+                `<div>
+                     <b>Localização do Trecho (PRF):</b> BR-381/MG - km 920 ao 928<br><b>Concessionaria (ANTT):</b> MOTIVA MINAS SP<br><b>IPR (MPF):</b> 132<br><b>Volume Médio Diário de Veículos (DNIT):</b> 24432.0<br><b>Quantidade de Acidentes (PRF):</b> 132<br><b>Quantidade de Mortos (PRF):</b> 2.0<br><b>Quantidade de Feridos Graves (PRF):</b> 132<br><b>Quantidade de Feridos Leves (PRF):</b> 2.0<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ec2e83b919f47c9e2aa74e08fe5dc23e.setIcon(icon_4e50e2aa24d6966f3af8a829ff5a9840);
+            
+    
+            var regular_polygon_marker_3dd326aa0154b6bb23bc962f89fd88de = new L.RegularPolygonMarker(
+                [-22.769118618257576, -46.199628408333325],
+                {
+  "stroke": true,
+  "color": "blue",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 10,
+  "numberOfSides": 20.0,
+  "rotation": 45,
+}
+            ).addTo(feature_group_561f2cc7ea86fc625084dd9fa86b9681);
+        
+    
+            feature_group_561f2cc7ea86fc625084dd9fa86b9681.addTo(map_45e7019bf12893504d6e40f49f7eb1be);
+        
+    
+            var marker_215f4bf03a8d8540706847f348dbdbba = L.marker(
+                [-7.0, -32.0],
+                {
+}
+            ).addTo(map_45e7019bf12893504d6e40f49f7eb1be);
+        
+    
+            var div_icon_1cf698e0283eb49ae8ba49c75b4afec1 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"position: absolute;\n                 top: 0px; left: 0px; width: 450px;\n                 background-color:peachpuff; border:2px solid grey; z-index:9999; font-size:14px;\n                 padding: 10px;\"\u003e\n        \u003cdiv style=\"font-size:16px; text-align: center;font-weight: bold; font-style: italic; color: darkred; text-decoration: underline;\"\u003e\n            \u003cimg src=\"https://github.com/user-attachments/assets/fb97c466-7731-4732-82c8-8a8982fd5a48\" style=\"width:300px;height:80px;\"\u003e\u003cbr\u003e\n            \u003cp\u003e\u003c/p\u003e\u003cbr\u003e\n            \u003cp\u003e50 Trechos de Rodovias Federais Mais Perigosos (8/2026)\u003c/p\u003e\u003cbr\u003e\n        \u003c/div\u003e\n        \u003cstrong\u003eLEGENDA:\u003c/strong\u003e\u003cbr\u003e\n        \u003ci class=\"fa fa-location-pin\" style=\"color:darkred\"\u003e\u003c/i\u003e - Trechos com maiores \u00cdndices de Perigo da Rodovia\u003cbr\u003e\n        \u003ci class=\"fa fa-location-pin\" style=\"color:orange\"\u003e\u003c/i\u003e - Trechos com \u00cdndices de Perigo da Rodovia intermedi\u00e1rios\u003cbr\u003e\n        \u003ci class=\"fa fa-location-pin\" style=\"color:beige\"\u003e\u003c/i\u003e - Trechos com menores \u00cdndices de Perigo da Rodovia\u003cbr\u003e\n        \u003ci class=\"fa-regular fa-circle\" style=\"color:blue\"\u003e\u003c/i\u003e - Trechos concedidos\u003cbr\u003e\n        \u003cp\u003e\u003c/p\u003e\u003cbr\u003e\n        \u003cdiv style=\"text-align: center;\"\u003e\n            \u003cimg src=\"https://github.com/user-attachments/assets/f92f2898-9e8b-443e-8c66-3b8c28e474d8\" style=\"width:400px;height:70px;\"\u003e\u003cbr\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n",
+  "className": "empty",
+});
+        
+    
+                marker_215f4bf03a8d8540706847f348dbdbba.setIcon(div_icon_1cf698e0283eb49ae8ba49c75b4afec1);
+            
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_45e7019bf12893504d6e40f49f7eb1be);
+        
+    
+            var layer_control_c07617fb8ab231b120715da617fe0fbb_layers = {
+                base_layers : {
+                    "Mapa" : tile_layer_4ce0a90e93813449377c28d43dc356e9,
+                },
+                overlays :  {
+                    "Trecho n\u00e3o concedido" : feature_group_7ee01a907b44d6ffacd28ac90a25182c,
+                    "Trecho concedido" : feature_group_561f2cc7ea86fc625084dd9fa86b9681,
+                },
+            };
+            let layer_control_c07617fb8ab231b120715da617fe0fbb = L.control.layers(
+                layer_control_c07617fb8ab231b120715da617fe0fbb_layers.base_layers,
+                layer_control_c07617fb8ab231b120715da617fe0fbb_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_45e7019bf12893504d6e40f49f7eb1be);
+
+        
+</script>
+</html>
